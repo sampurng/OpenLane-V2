@@ -108,4 +108,4 @@ def collect(root_path : str, data_dict : dict, collection : str, with_sd_map : b
                     line = np.array(road.coords, dtype=np.float32)
                     meta[identifier]['sensor']['sd_map'][element['category']].append(line)
 
-    io.pickle_dump(f'{root_path}/{collection}.pkl', meta)
+    return meta
